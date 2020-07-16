@@ -3,7 +3,6 @@ include('db-connect.php');
 
 
  
-//write query for all pizzas
 $sql = 'SELECT * FROM user ';
 
 // make query & get result
@@ -17,11 +16,8 @@ mysqli_free_result($result);
 
 //close connections
 mysqli_close($conn);
-
-//print_r($pizzas);
- ?>
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -34,8 +30,7 @@ mysqli_close($conn);
       <?php foreach ($users as $user){ ?>
         <div class="col s4 md3 black">
           <div class="center card z-depth-0">
-<!--             <img src="img/fations.png" alt="shope img" class="shope">
- -->            <div class="center card-content center">
+             <div class="center card-content center">
               <h4 class="brand-text"><?php echo htmlspecialchars($user['userName']); ?></h4>
               <h6 ><?php echo htmlspecialchars($user['email']); ?></h6>
             </div>
